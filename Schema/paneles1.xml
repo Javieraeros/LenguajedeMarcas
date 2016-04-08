@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<paneles xmlns="http://www.example.org/paneles" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/paneles paneles.xsd ">
+	<evento fecha="2001-12-31T12:00:00" tipo="">
+		<via />
+		<pk>0.0</pk>
+		<retencion long="0.0" />
+		<sentido>-1</sentido>
+		<carrilescortados valor="0">carrilescortados</carrilescortados>
+	</evento>
+</paneles>

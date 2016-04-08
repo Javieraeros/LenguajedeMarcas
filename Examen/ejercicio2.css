@@ -1,0 +1,31 @@
+@CHARSET "ISO-8859-1";
+/***************************************************/
+/*QUEDAN PULIR ERRORES*/
+/***************************************************/
+div#morado {
+	margin:auto;
+	width:600px;
+	height:60%;
+	background-color: purple;
+	padding: 1em;
+}
+span{
+	position:absolute;
+}
+img {
+	width:200px;
+	height:200px;
+	margin:20px;
+	border: orange 10px solid;
+}
+.oculta {
+	width:200px;
+	height:200px;
+	visibility:hidden;
+	z-index: +10;
+}
+a:hover .oculta {
+	visibility: visible;
+	position: relative;
+	left:-260px;
+}

@@ -1,0 +1,24 @@
+<!--Definir un DTD (atomos.dtd) y un fichero XML (atomos.xml) válido con respecto a aquel, de tal
+forma que contenga un listado de uno o más átomos donde cada átomo tiene las siguientes
+características:
+- un atributo estado
+- un elemento nombre
+- un elemento símbolo
+- un elemento número atómico
+- un elemento peso atómico
+- un elemento punto_ebullicion con un atributo unidades
+- un elemento densidad con un atributo unidades-->
+<!ELEMENT TABLA_PERIODICA (ATOMO+)>
+<!ELEMENT ATOMO (NOMBRE,SIMBOLO,NUMERO_ATOMICO,PESO_ATOMICO,PUNTO_EBULLICION,DENSIDAD)>
+<!ELEMENT NOMBRE (#PCDATA)>
+<!ELEMENT SIMBOLO (#PCDATA)>
+<!ELEMENT NUMERO_ATOMICO (#PCDATA)>
+<!ELEMENT PESO_ATOMICO (#PCDATA)>
+<!ELEMENT PUNTO_EBULLICION (#PCDATA)>
+<!ELEMENT DENSIDAD (#PCDATA)>
+
+
+<!ATTLIST ATOMO ESTADO CDATA #REQUIRED>
+<!ATTLIST PUNTO_EBULLICION UNIDADES CDATA #REQUIRED>
+<!ATTLIST DENSIDAD UNIDADES CDATA #REQUIRED>
+

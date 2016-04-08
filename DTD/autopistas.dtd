@@ -1,0 +1,30 @@
+<!--Implementa un documento DTD adecuado para almacenar información de paneles de autopista
+como el del fichero autopistas.xml con las siguientes características:
+- El elemento raíz se denomina "paneles"
+- "paneles" contiene un número indeterminado de elementos denominados "evento"
+- Cada "evento" tiene dos atributos obligatorios "tipo" y "fecha"
+- "tipo" puede tener sólo dos valores "Accidente" o "Retención"
+- Cada "evento" tiene los elementos obligatorios "via", "pk" y "sentido" y los elementos
+opcionales "retencion" y "carrilescortados".
+- "via" tiene los elementos opcionales "nombre", "ref", "origen", "destino", "doble" y
+"carriles".
+- "doble" no tiene contenido
+- "retencion" tiene el atributo opcional "long"-->
+<!ELEMENT paneles (evento)+>
+<!ELEMENT evento (via,pk,sentido,retencion?,carrilescortados?)>
+<!ATTLIST evento tipo (Accidente|Retención) #REQUIRED
+				fecha CDATA #REQUIRED>
+
+<!ELEMENT via (nombre,ref,origen,destino,doble,carriles)?>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT ref (#PCDATA)>
+<!ELEMENT origen (#PCDATA)>
+<!ELEMENT destino (#PCDATA)>
+<!ELEMENT doble EMPTY>
+<!ELEMENT carriles (#PCDATA)>
+<!ELEMENT pk (#PCDATA)>
+<!ELEMENT sentido (#PCDATA)>
+<!ELEMENT retencion (#PCDATA)>
+<!ATTLIST retencion long CDATA #IMPLIED>
+<!ELEMENT carrilescortados (#PCDATA)>
+<!ATTLIST carrilescortados valor CDATA #IMPLIED>

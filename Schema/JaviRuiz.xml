@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<federacion xmlns="http://www.example.org/JaviRuiz" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.example.org/JaviRuiz JaviRuiz.xsd ">
+  <colegios>
+    <colegio codigo="col07-AN">
+      <nombre>Colegio Andaluz</nombre>
+    </colegio>
+    <colegio codigo="col12-EX">
+      <nombre>Colegio Extremeño</nombre>
+    </colegio>
+  </colegios>
+  <arbitros>
+  	<arbitro nif="99252571L" categoría="PRIMERA">
+  		<nombre>Aurelio</nombre>
+  		<apellidos>
+  			<uno>Tarjetero</uno>
+  			<dos>Compulsivo</dos>
+  		</apellidos>
+  		<antig>7</antig>
+  		<colegio>col12-EX</colegio>
+  		<internacional/>
+  	</arbitro>
+  	<arbitro nif="12148259F" categoría="SEGUNDA">
+  		<nombre>Manuel</nombre>
+  		<antig>12</antig>
+  		<apellidos>
+  			<dos>Pito-Veloz</dos>
+  			<uno>Bisel</uno>
+  		</apellidos>
+  		<colegio>col07-AN</colegio>
+  	</arbitro>
+  	<arbitro nif="41724499K" categoría="SEGUNDA">
+  		<apellidos>
+  			<uno>Feijoo</uno>
+  			<dos>Mezquita</dos>
+  		</apellidos>
+  		<antig>3</antig>
+  		<nombre>Luis</nombre>
+  		<colegio>col07-AN</colegio>
+  	</arbitro>
+  </arbitros>
+</federacion>

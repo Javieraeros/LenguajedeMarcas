@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE NEWSPAPER SYSTEM "Ejercicio 2.dtd">
+<NEWSPAPER>
+	<ARTICLE AUTHOR="Yo" DATE="15/01/2016" EDITION="Velver" EDITOR="Luis">
+		<HEADLINE>Gana el Betis</HEADLINE>
+		<BYLINE>Francisco Javier Ruiz Rodríguez</BYLINE>
+		<LEAD>"Después de tantos años, vuelvo a ver ganar al Betis" declara
+		un pobre anciano antes de tomarse su sol y sombra</LEAD>
+		<BODY>El Betis se llevó en la muerte súbita de los penaltis el Trofeo Vía dela Plata. 
+		El equipo de Mel jugó la mayor parte del tiempo con un equipo repleto de suplentes 
+		(y algunos, como Kadir y Vadillo, casi descartes) y fue incapaz de marcar 
+		(en juego) en el estadio Romano ante el Mérida, actual líder del grupo IV de la 
+		Segunda División B. El encuentro sirvió sobre todo para dar algo de competición a
+		 algunos fichajes a los que las lesiones o la falta de oportunidades están 
+		 impidiendo tener minutos, como el central argentino Pezzella, el pivote francés 
+		 Digard o el defensa egipcio Tarek. Éste último, demasiado impetuoso, vio la 
+		 amarilla al poco de comenzar.</BODY>
+		<NOTES>&NEWSPAPER;&COPYRIGHT;&PUBLISHER;</NOTES>
+	</ARTICLE>
+</NEWSPAPER>

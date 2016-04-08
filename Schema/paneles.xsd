@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.example.org/paneles" 
+	xmlns="http://www.example.org/paneles" 
+	elementFormDefault="qualified">
+	<xs:element name="paneles">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:restriction base="xs:anyType">
+					<xs:sequence>
+						<xs:element name="evento" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:restriction base="xs:anyType">
+										<xs:sequence>
+											<xs:element name="via" type="tipo_via" minOccurs="1"/>
+											<xs:element name="pk" type="tipo_pk" minOccurs="1"/>
+											<xs:element name="retencion" type="tipo_ret" minOccurs="0"/>
+											<xs:element name="sentido" type="tipo_sen" minOccurs="1"/>
+											<xs:element name="carrilescortados" type="tipo_cc" minOccurs="0"/>
+										</xs:sequence>
+										<xs:attribute name="tipo" type="atri_tipo" use="required"/>
+										<xs:attribute name="fecha" type="atri_fecha" use="required"/>
+									</xs:restriction>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	
+	
+	<xs:complexType name="tipo_via">
+		<xs:complexContent>
+			<xs:restriction base="xs:anyType">
+				<xs:sequence>
+					<xs:element name="nombre" type="tipo_nombre" minOccurs="0"/>
+					<xs:element name="ref" type="tipo_ref" minOccurs="0"/>
+					<xs:element name="origen" type="cadena" minOccurs="0"/>
+					<xs:element name="destino" type="cadena" minOccurs="0"/>
+					<xs:element name="doble" type="xs:string" fixed="" minOccurs="0"/>
+					<xs:element name="carriles" type="tipo_carriles" minOccurs="0"/>
+				</xs:sequence>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:simpleType name="tipo_nombre">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="50"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="tipo_ref">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Z]{1,3}-[0-9]{1,4}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="cadena">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="30"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="tipo_carriles">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="1"/>
+			<xs:maxInclusive value="8"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="tipo_pk">
+		<xs:restriction base="xs:decimal">
+			<xs:fractionDigits value="3"></xs:fractionDigits>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="tipo_ret">
+		<xs:complexContent>
+			<xs:extension base="xs:anyType">
+				<xs:attribute name="long" type="tipo_pk" use="optional" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:simpleType name="tipo_sen">
+		<xs:restriction base="xs:int">
+			<xs:enumeration value="-1"/>
+			<xs:enumeration value="0"/>
+			<xs:enumeration value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="tipo_cc">
+		<xs:simpleContent>
+			<xs:extension base="xs:anySimpleType">
+				<xs:attribute name="valor" use="required" >
+					<xs:simpleType>
+						<xs:restriction base="xs:int">
+							<xs:minInclusive value="1"/>
+							<xs:maxInclusive value="8"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:simpleType name="atri_tipo">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="Accidente|Retención"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="atri_fecha">
+		<xs:restriction base="xs:dateTime"/>
+	</xs:simpleType>
+	
+</xs:schema>

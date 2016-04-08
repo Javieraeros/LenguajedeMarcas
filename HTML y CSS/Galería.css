@@ -1,0 +1,43 @@
+@CHARSET "ISO-8859-1";
+#container {
+	background-color: #e4faea;
+	width:95%;
+	margin:0.5em auto;
+	border: gray 1px solid;
+	overflow:auto;
+}
+header {
+	padding:0.5em;
+	border-bottom: gray 1px solid;
+}
+header h1 {
+	padding:0;
+	margin:0;
+}
+nav {
+	float:left;
+	width:180px;
+	margin:0;
+	padding:0.5em;
+	border-right: gray 1px solid;
+}
+.peque {
+	width:160px;
+	height:90px;
+}
+.grande {
+	width:60%;
+	height:60%;
+	position:absolute;
+	margin:0;
+	padding: 20% 5% 20% 5% ;
+	visibility:hidden;
+}
+footer {
+	clear:both;
+	border-top: 1px solid gray;
+}
+a:hover .grande{
+	visibility:visible;
+	border: 2px blue solid;
+}

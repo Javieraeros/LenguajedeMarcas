@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE paneles SYSTEM "autopistas.dtd">
+<paneles>
+	<evento tipo="Accidente" fecha="Mon, 31 Jan 2011 23:00:00 GMT">
+		<via>
+			<nombre>Autopista del V Centenario</nombre>
+			<ref>A-49</ref>
+			<origen>Sevilla</origen>
+			<destino>Huelva</destino>
+			<doble/>
+			<carriles>4</carriles>
+		</via>
+		<pk>42.200</pk>
+		<sentido>1</sentido>
+		<retencion long="8.000"/>
+		<carrilescortados valor="1"/>
+	</evento>
+	<evento tipo="Retención" fecha="Tue, 1 Feb 2011 13:43:01 GMT">
+		<via>
+			<nombre>Autovía de Andalucía</nombre>
+			<ref>A-4</ref>
+			<origen>Madrid</origen>
+			<destino>Cádiz</destino>
+			<doble/>
+			<carriles>4</carriles>
+		</via>
+		<pk>550.000</pk>
+		<sentido>-1</sentido>
+		<retencion long="3.000"/>
+	</evento>
+</paneles>

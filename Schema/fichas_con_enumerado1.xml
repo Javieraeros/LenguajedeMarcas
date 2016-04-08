@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:fichas xmlns:p="http://www.example.org/fichas_con_enumerado" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/fichas_con_enumerado fichas_con_enumerado.xsd ">
+  <p:ficha categoria="" zona="">
+    <p:nombre>p:nombre</p:nombre>
+    <p:apellido1>p:apellido1</p:apellido1>
+    <p:apellido2>p:apellido2</p:apellido2>
+    <p:email>p:email</p:email>
+    <p:direccion>
+      <p:calle>p:calle</p:calle>
+      <p:piso>p:piso</p:piso>
+      <p:letra>p:letra</p:letra>
+      <p:codigo_postal>0</p:codigo_postal>
+      <p:ciudad>p:ciudad</p:ciudad>
+      <p:pais>p:pais</p:pais>
+    </p:direccion>
+  </p:ficha>
+</p:fichas>

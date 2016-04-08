@@ -1,0 +1,59 @@
+@CHARSET "ISO-8859-1";
+body {
+	font-size: 1.5em;
+}
+
+header {
+	background-color: orange;
+	text-align: right;
+	padding:0.1em 0.1em 1em 0.1em;
+}
+
+h1,h2,footer,a{
+	color:purple;
+}
+
+header ul {
+	margin:0;
+}
+header h1 {
+	text-align: center;
+	margin:0.5em 0 1em 0;
+}
+header li {
+	display:inline;
+	list-style-type: none;
+	margin:0 0.1em 1em 1em;
+}
+
+section article a{
+	color:orange;
+}
+aside {
+	margin:0;
+	padding:0;
+	float:left;
+	width:20%;
+	height:700px;
+	background-color:#eeeeee;
+}
+aside li{
+	list-style-type:square;
+}
+aside a:HOVER{
+	color:orange;
+	text-decoration: none;	
+}
+section {
+	margin-left:20%;
+	padding-left:0.5em; /*Por la imagen no se si tiene padding en los demás sitios*/
+	width:75%;
+	text-align: justify;
+}
+footer {
+	padding:0.5em;
+	clear:both;
+	text-align:right;
+	font-size: 0.8em;
+	background-color: orange;
+}

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/JaviRuiz" xmlns="http://www.example.org/JaviRuiz"
+	elementFormDefault="qualified">
+	<xs:element name="federacion">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:restriction base="xs:anyType">
+					<xs:all>
+						<xs:element name="colegios" type="tipo_colegios" minOccurs="1" maxOccurs="1" />
+						<xs:element name="arbitros" type="tipo_arbitros" minOccurs="1" maxOccurs="1" />
+					</xs:all>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:complexType name="tipo_colegios">
+		<xs:complexContent>
+			<xs:restriction base="xs:anyType">
+				<xs:sequence>
+					<xs:element name="colegio" type="tipo_colegio" minOccurs="1" maxOccurs="unbounded" />
+				</xs:sequence>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="tipo_colegio">
+		<xs:complexContent>
+			<xs:restriction base="xs:anyType">
+				<xs:sequence>
+					<xs:element name="nombre" type="xs:string" minOccurs="1" maxOccurs="1" />
+				</xs:sequence>
+				<xs:attribute name="codigo" type="atri_codigo" use="required" />
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:simpleType name="atri_codigo">
+		<xs:restriction base="xs:ID">
+			<xs:pattern value="col(0[1-9]|1[0-9]|2[0-7])-[A-Z][A-Z]" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="tipo_arbitros">
+		<xs:complexContent>
+			<xs:restriction base="xs:anyType">
+				<xs:sequence>
+					<xs:element name="arbitro" type="tipo_arbitro" minOccurs="1" maxOccurs="unbounded" />
+				</xs:sequence>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="tipo_arbitro">
+		<xs:complexContent>
+			<xs:restriction base="xs:anyType">
+				<xs:all>
+					<xs:element name="nombre" type="tipo_nombre" minOccurs="1" maxOccurs="1" />
+					<xs:element name="apellidos" type="tipo_apellidos" minOccurs="1" maxOccurs="1" />
+					<xs:element name="antig" type="tipo_ant" minOccurs="1" maxOccurs="1" />
+					<xs:element name="colegio" type="tipo_col" minOccurs="1" maxOccurs="1" />
+					<xs:element name="internacional" type="tipo_inter" minOccurs="0" maxOccurs="1" />
+				</xs:all>
+				<xs:attribute name="nif" type="tipo_nif" use="required"/>
+				<xs:attribute name="categoría" type="tipo_cat" use="required"/>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:simpleType name="tipo_nombre">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[a-zA-Z \-]*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="tipo_apellidos">
+		<xs:complexContent>
+			<xs:restriction base="xs:anyType">
+				<xs:all>
+					<xs:element name="uno" type="tipo_nombre" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="dos" type="tipo_nombre" minOccurs="0" maxOccurs="1"/>
+				</xs:all>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:simpleType name="tipo_ant">
+		<xs:restriction base="xs:int">
+			<xs:minInclusive value="0"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="tipo_col">
+		<xs:restriction base="xs:IDREF"/>
+	</xs:simpleType>
+	
+	<xs:simpleType name="tipo_inter">
+		<xs:restriction base="xs:string" >
+			<xs:maxLength value="0" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="tipo_nif">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-9]{8}[a-zA-Z]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="tipo_cat">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="PRIMERA|SEGUNDA"/>
+		</xs:restriction>
+	</xs:simpleType>		
+</xs:schema>

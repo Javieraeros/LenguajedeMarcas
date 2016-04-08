@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alumno xmlns="http://www.example.org/Alumno" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/Alumno Alumno.xsd">
+	<Nombre>Javier</Nombre>
+	<Apellido tipo="1">Ruiz</Apellido>
+	<Apellido tipo="2">Rodriguez</Apellido>
+</Alumno>

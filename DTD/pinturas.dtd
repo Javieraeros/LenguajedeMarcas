@@ -1,0 +1,42 @@
+<!--Supongamos que tenemos una tienda de pinturas, para la cual, 
+mediante un software nos vamos encargar de almacenar 
+(sin valernos de un gestor de base datos) la información
+referente a los pedidos que se realizan desde la misma a los 
+distintos proveedores que nos proporcionan los distintos tipos 
+de pinturas.
+Vamos a utilizar como medio de almacenamiento un sistema de 
+ficheros, de manera que vamos a definir el formato de los mismos 
+mediante XML.
+Para la definición del contenido de los ficheros vamos a 
+trabajar teniendo en cuenta las siguientes consideraciones:
+• Cada pintura viene determinada por la marca (dupont, tintanlux, bruguer, etc.)
+además del color (magenta, bermellón, etc.).
+• El pedido en sí viene identificado por el proveedor y la 
+pintura de que se trate, además de la fecha y hora en que se 
+realizo dicho pedido, también para cada pedido se almacenará la
+cantidad de pintura demandada.
+• Del proveedor almacenamos el CIF (código de identificación 
+fiscal) que es su identificativo y por tanto es único, 
+junto con su nombre, domicilio y teléfono(s).
+Se pide diseñar un fichero DTD y un fichero XML válido.-->
+<!ELEMENT TIENDA (PROVEEDORES,PEDIDOS)>
+
+<!ELEMENT PROVEEDORES (PROVEEDOR)+>
+<!ELEMENT PROVEEDOR (NOMBRE,APELLIDOS,DOMICILIO,TELEFONO*)>
+<!ATTLIST PROVEEDOR CIF ID #REQUIRED>
+<!ELEMENT NOMBRE (#PCDATA)>
+<!ELEMENT APELLIDOS (#PCDATA)>
+<!ELEMENT DOMICILIO (#PCDATA)>
+<!ELEMENT TELEFONO (#PCDATA)>
+
+
+<!ELEMENT PEDIDOS (PEDIDO)+>
+<!ELEMENT PEDIDO (PINTURA)+>
+<!ATTLIST PEDIDO IDPROVEEDOR IDREF #REQUIRED
+				 FECHAHORA CDATA #IMPLIED>
+<!ELEMENT PINTURA (MARCA,COLOR)>
+<!ATTLIST PINTURA CANTIDAD CDATA #REQUIRED>
+<!ELEMENT MARCA (#PCDATA)>
+<!ELEMENT COLOR (#PCDATA)>
+
+

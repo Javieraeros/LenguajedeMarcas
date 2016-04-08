@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editoriales xmlns="http://www.example.org/Editoriales" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://www.example.org/Editoriales Editoriales.xsd ">
+  <titulo>titulo</titulo>
+  <editorial>
+    <nombre>nombre</nombre>
+    <email>email</email>
+    <homepage>homepage</homepage>
+    <direccion>direccion</direccion>
+    <tfno>0</tfno>
+    <fax>0</fax>
+  </editorial>
+  <editorial>
+  	<nombre>Pepito</nombre>
+  	<direccion>Grillo</direccion>
+  </editorial>
+</editoriales>

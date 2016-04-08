@@ -1,0 +1,46 @@
+Sobre el fichero 2 seleccionar mediante sentencias xpath:
+
+1. Los elementos BBB
+
+//BBB
+
+2. Los elementos DDD que son hijos de BBB
+
+//BBB/DDD
+
+3. Los elementos DDD que tienen algún hermano CCC
+
+//DDD[preceding-sibling::CCC | following-sibling::CCC] 
+//DDD[../CCC]
+
+4. Los elementos DDD con algún atributo xxx cuyo valor sea oo.
+
+//DDD[@xxx='oo']
+
+5. Los elementos CCC con algún atributo
+
+//CCC[@*]
+
+6. Todos los elmentos con algún atributo llamado xxx
+
+//*[@xxx]
+
+7. Todos los elementos con más de un atributo
+
+//*[count(@*)>1]
+
+Sobre el fichero 5 seleccionar mediante sentencias xpath:
+1. Todos los nombres y apellidos de la libreta de direcciones
+
+//firstName | //surname
+
+2. El teléfono de casa de Alice Brown
+
+//tel[preceding-sibling::firstName='Alice' and preceding-sibling::surname='Brown' and @type='home']
+//tel[../firstname='Alice' and ../surname='Brown' and @type='home']
+
+3. El email de todas las personas que tienen una "e" en su nombre
+
+//email[contains(../firstName,'e')]
+
+

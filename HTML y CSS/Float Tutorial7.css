@@ -1,0 +1,7 @@
+@CHARSET "ISO-8859-1";
+.DropCap {
+	float:left;
+	width:.9em;
+	font-size: 4em;
+	line-height: 85%;
+}

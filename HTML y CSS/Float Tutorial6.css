@@ -1,0 +1,25 @@
+@CHARSET "ISO-8859-1";
+#navlist {
+	list-style-type: none;
+	padding: 0;
+	margin:0;
+	float:left;
+	width:100%;
+	color: white;
+	background-color: #003366;
+}
+li {
+	display:inline;
+}
+a {
+	float:left;
+	width:5em;
+	padding: 0.2em 1em;
+	color:white;
+	background-color: #003366;
+	text-decoration: none;
+	border-right: solid white 0.1em;
+}
+a:hover {
+	background-color: green;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca
+xmlns="http://www.example.org/Libro"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.example.org/Libro Libro.xsd">
+	<libro codigo="5200" ubicacion="estanteria 5">
+		<autor>Miguel de Cervantes Saavedra</autor>
+		<titulo>El Quijote de la Mancha</titulo>
+	</libro>
+	<libro>
+		<autor>Miguel de Cervantes Saavedra</autor>
+		<titulo>El Quijote de la Mancha</titulo>
+	</libro>
+</biblioteca>

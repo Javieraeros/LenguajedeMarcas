@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CATALOG SYSTEM "Ejercicio 3.dtd">
+<CATALOG>
+	<PRODUCT CATEGORY="HandTool" INVENTORY="Discontinued" NAME="Trompo" PARTNUM="Aro joe" PLANT="Chicago">
+		<SPECIFICATIONS POWER="MUY PODEROSO" WEIGHT="GORDO Y GRANDE">
+		Gran trompo potente y ruidoso, para darle por culo a tu vecino
+		el domingo a als 6 de la mañana</SPECIFICATIONS>
+		<OPTIONS ADAPTER="Included" CASE="HardShell" FINISH="Polished">Extra Ruidoso</OPTIONS>
+		<PRICE WHOLESALE="MAS BARATO NIÑA">BARATO NIÑA BARATO</PRICE>
+		<NOTES >Tal vez la broca no gire &EMAIL;</NOTES>
+	</PRODUCT>
+	<PRODUCT CATEGORY="Table" INVENTORY="InStock" NAME="Tablero de corte" PARTNUM="No" PLANT="Milwaukee">
+		<SPECIFICATIONS WEIGHT="3 kintales">Buena maera pa cortá sanahoria</SPECIFICATIONS>
+		<OPTIONS ADAPTER="NotApplicable" FINISH="Metal">en verdad no es de metal, pero queda gracioso</OPTIONS>
+		<PRICE STREET="Wooden Street">CARA</PRICE>
+		<NOTES>El precio puede variar de una tabla a otra, no se admite devolución</NOTES>
+	</PRODUCT>
+</CATALOG>

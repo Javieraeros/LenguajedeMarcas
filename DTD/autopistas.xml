@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE paneles SYSTEM "autopistas.dtd" >
+<paneles>
+  <evento fecha="" tipo="Accidente">
+    <via/>
+    <pk>pk</pk>
+    <sentido>sentido</sentido>
+    <retencion long="">retencion</retencion>
+    <carrilescortados valor="">carrilescortados</carrilescortados>
+  </evento>
+</paneles>

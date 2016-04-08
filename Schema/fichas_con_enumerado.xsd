@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.example.org/fichas_con_enumerado" 
+	xmlns="http://www.example.org/fichas_con_enumerado" 
+	elementFormDefault="qualified">
+	<xs:element name="fichas">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:restriction base="xs:anyType">
+					<xs:sequence>
+						<xs:element name="ficha" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:complexContent>
+									<xs:restriction base="xs:anyType">
+										<xs:sequence>
+											<xs:element name="nombre" type="xs:string"/>
+											<xs:element name="apellido1" type="xs:string"/>
+											<xs:element name="apellido2" type="xs:string"/>
+											<xs:element name="email" type="tipo_email"  minOccurs="0" maxOccurs="2" />
+											<xs:element name="direccion" type="tipo_direccion" minOccurs="0" maxOccurs="3"/>
+										</xs:sequence>
+										<xs:attribute name="categoria" type="tipo_cat" use="required"/>
+										<xs:attribute name="zona" type="tipo_zona" use="optional"/>
+									</xs:restriction>
+								</xs:complexContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="tipo_email">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([a-zA-Z])+@([a-zA-Z])+.com"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="tipo_direccion">
+		<xs:complexContent>
+			<xs:restriction base="xs:anyType">
+				<xs:sequence>
+					<xs:element name="calle" type="xs:string"/>
+					<xs:element name="piso" type="xs:string" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="letra" minOccurs="0" maxOccurs="1">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:pattern value="[a-zA-Z]"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="codigo_postal">
+						<xs:simpleType>
+							<xs:restriction base="xs:int">
+								<xs:minInclusive value="1000"/>
+								<xs:maxInclusive value="9999"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:element>
+					<xs:element name="ciudad" type="xs:string"/>
+					<xs:element name="pais" type="xs:string"/>
+				</xs:sequence>
+			</xs:restriction>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="tipo_cat">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="empresa|particular|agente_comercial"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipo_zona">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="Centro|Macarena|Remedios"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

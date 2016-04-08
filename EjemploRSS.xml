@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+		<tittle>Página de Javi</tittle>
+		<link>https://sites.google.com/site/javieraeros2</link>
+		<description>Pagina de prueba de Javi</description>
+		<image>
+		  <url>https://c2a3132d-a-62cb3a1a-s-sites.googlegroups.com/site/javieraeros2/noticias/hqdefault.jpg</url>
+		  <title>Imagen</title>
+		  <link>https://sites.google.com//site/javieraeros2/noticias</link>
+		</image>
+		<item>
+			<tittle>PRIMERA NOTICIA DE JAVI</tittle>
+			<link> https://sites.google.com//site/javieraeros2/noticias</link>
+			<description>Primera noticia de tito Javi</description>
+			<enclosure url="https://c2a3132d-a-62cb3a1a-s-sites.googlegroups.com/site/javieraeros2/noticias/hqdefault.jpg" length="500" type="image" />
+		</item>
+	</channel>
+</rss>

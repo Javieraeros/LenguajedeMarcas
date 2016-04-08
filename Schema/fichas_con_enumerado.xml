@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:fichas xmlns:p="http://www.example.org/fichas_con_enumerado" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.example.org/fichas_con_enumerado fichas_con_enumerado.xsd ">
+  <p:ficha categoria="empresa">
+    <p:nombre>Javier</p:nombre>
+    <p:apellido1>Rui</p:apellido1>
+    <p:apellido2>Rodríguez</p:apellido2>
+    <p:email>Javier@a.com</p:email>
+    <p:email>Pajarrurro@gmail.com</p:email>
+    <p:direccion>
+      <p:calle>p:calle</p:calle>
+      <p:piso>p:piso</p:piso>
+      <p:letra>z</p:letra>
+      <p:codigo_postal>1001</p:codigo_postal>
+      <p:ciudad>p:ciudad</p:ciudad>
+      <p:pais>p:pais</p:pais>
+    </p:direccion>
+  </p:ficha>
+  <p:ficha categoria="empresa" zona="Macarena">
+    <p:nombre>p:nombre</p:nombre>
+    <p:apellido1>p:apellido1</p:apellido1>
+    <p:apellido2>p:apellido2</p:apellido2>
+    <p:direccion>
+      <p:calle>p:calle</p:calle>
+      <p:codigo_postal>4774</p:codigo_postal>
+      <p:ciudad>p:ciudad</p:ciudad>
+      <p:pais>p:pais</p:pais>
+    </p:direccion>
+  </p:ficha>
+</p:fichas>

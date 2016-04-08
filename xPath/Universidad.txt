@@ -1,0 +1,117 @@
+Ejercicios XPath
+ 
+
+1. Nombre de la Universidad
+
+/universidad/nombre
+
+2. Pais de la Universidad
+
+/universidad/pais
+
+3. Nombres de las Carreras
+
+//carrera/nombre
+
+4. Años de plan de estudio de las carreras
+
+//carrera/plan
+
+5. Nombres de todos los alumnos
+
+//alumnos/alumno/nombre
+
+6. Identificadores de todas las carreras
+
+//carrera/@id
+
+7. Datos de la carrera cuyo id es c01
+
+//carrera[@id='c01']
+
+8. Centro en que se estudia de la carrera cuyo id es c02
+
+//carrera[@id='c02']/centro
+
+9. Nombre de las carreras que tengan subdirector
+
+//carrera/nombre[following-sibling::subdirector | preceding-sibling::subdirector]
+//carrera/nombre[../subdirector]
+//carrera[subdirector]/nombre
+//subdirector/../nombre
+
+10. Nombre de los alumnos que están haciendo proyecto
+
+//alumnos/alumno/nombre[preceding-sibling::estudios/proyecto | following-sibling::estudios/proyecto]
+
+11. Códigos de las carreras en las que hay algún alumno matriculado
+
+//alumno/estudios/carrera/@codigo
+
+12. Apellidos y Nombre de los alumnos con beca
+
+//alumno[@beca='si'] /apellido1 | //alumno[@beca='si'] /apellido2 | //alumno[@beca='si'] /nombre
+
+13. Nombre de las asignaturas de la titulación c04
+
+//asignaturas/asignatura[@titulacion='c04']/nombre
+
+14. Nombre de las asignaturas de segundo trimestre
+
+//asignaturas/asignatura[trimestre='2']/nombre
+
+15. Nombre de las asignaturas que no tienen 4 créditos teóricos
+
+//asignaturas/asignatura/nombre[../creditos_teoricos!='4']
+//asignaturas/asignatura[creditos_teoricos!='4']/nombre
+
+16. Código de la carrera que estudia el último alumno
+
+//alumnos/alumno[last()]/estudios/carrera/@codigo
+
+17. Cï¿½digo de las asignaturas que estudian mujeres
+
+//alumnos/alumno[sexo='Mujer']/estudios/asignaturas/asignatura/@codigo
+
+18. Nombre de los alumnos que matriculados en la asignatura a02
+
+//alumno/nombre[../estudios/asignaturas/asignatura/@codigo='a02']
+//alumno[estudios/asignaturas/asignatura/@codigo='a02']/nombre
+
+19. Códigos de las carreras que estudian los alumnos matriculados en alguna asignatura
+
+//alumno/estudios[asignaturas/asignatura]/carrera/@codigo
+
+20. Apellidos de todos los hombres
+
+//alumno/apellido1[../sexo='Hombre'] | //alumno/apellido2[../sexo='Hombre']
+
+21. Nombre de la carrera que estudia Víctor Manuel
+
+//carrera[@id=//alumno[nombre='Víctor Manuel']/estudios/carrera/@codigo]/nombre
+
+22. Nombre de las asignaturas que estudia Luisa
+
+//asignatura[@id=//alumno[nombre='Luisa']/estudios/asignaturas/asignatura/@codigo]/nombre
+
+23. Primer apellido de los alumnos matriculados en Ingeniería del Software
+
+//alumno[estudios/asignaturas/asignatura/@codigo=/universidad/asignaturas/asignatura[nombre='Ingeniería del Software']/@id]/apellido1
+
+24. Nombre de las carreras que estudian los alumnos matriculados en la asignatura Tecnología de los Alimentos
+
+//carreras/carrera[@id=//alumnos/alumno/estudios[asignaturas/asignatura/@codigo=//universidad/asignaturas/asignatura[nombre='Tecnología de los Alimentos']/@id]/carrera/@codigo]/nombre
+
+25. Nombre de los alumnos matriculados en carreras que no tienen subdirector
+
+//alumnos/alumno[estudios/carrera/@codigo=//carreras/carrera[not(subdirector)]/@id]/nombre
+
+26. Nombre de las alumnos matriculados en asignaturas con 0 créditos prácticos y 
+que estudien la carrera de I.T. Informática
+
+//alumnos/alumno[estudios[carrera/@codigo=//carreras/carrera[nombre='I.T. Informática']/@id]/asignaturas/asignatura/@codigo=//universidad/asignaturas/asignatura[creditos_practicos='0']/@id]/nombre
+
+27. Nombre de los alumnos ques estudian carreras cuyos planes son anteriores a 2002
+
+//alumnos/alumno[estudios/carrera/@codigo=//carreras/carrera[plan<'2002']/@id]/nombre
+ 

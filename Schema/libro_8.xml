@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca xmlns="http://www.example.org/Libro" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/Libro libro_8.xsd">
+	<libro>
+		<autor>Pene</autor>
+		<titulo>pene</titulo>
+		<codigo>8464</codigo>
+		<ubicacion>estanteria1</ubicacion>
+	</libro>
+	<web>pene</web>
+</biblioteca>

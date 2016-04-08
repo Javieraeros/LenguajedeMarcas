@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.example.org/equipos"
+xmlns="http://www.example.org/equipos" 
+elementFormDefault="qualified">
+
+<xs:element name="equipos">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="equipo" maxOccurs="unbounded">
+      	<xs:simpleType>
+	    	<xs:restriction base="xs:string">
+	      		<xs:pattern value="Betis|Sevilla|Madrid|Barcelona"/>
+	      	</xs:restriction>
+	  	</xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+
+</xs:schema>

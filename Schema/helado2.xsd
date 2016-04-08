@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/helado2" 
+	xmlns="http://www.example.org/helado2"
+	elementFormDefault="qualified">
+	<xs:element name="helado2">
+		<xs:complexType>
+			<xs:complexContent>
+				<xs:restriction base="xs:anyType">
+					<xs:sequence>
+						<xs:element name="sabor" type="tipo_sabor"/>
+						<xs:element name="tipo" type="tipo_helado"/>
+						<xs:element name="tamaño" type="tipo_tamaño"/>
+					</xs:sequence>
+				</xs:restriction>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="tipo_sabor">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="chocolate|fresa|vainilla|limon"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipo_helado">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="tarrina|cono"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tipo_tamaño">
+		<xs:restriction base="xs:string">
+				<xs:pattern value="grande|mediano|pequeño"/>
+			</xs:restriction>
+		</xs:simpleType>
+</xs:schema>
