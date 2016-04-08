@@ -133,7 +133,7 @@
 						<xsl:sort select="puntos" order="descending" />
 					</xsl:for-each>
 				</table>
-				<br/>
+				<br />
 				<table border="1">
 					<tr bgcolor="green">
 						<th>Equipo</th>
@@ -147,25 +147,41 @@
 					</tr>
 					<xsl:for-each select="equipos/equipo">
 						<xsl:choose>
-							<xsl:when test="position()>=4"/>
+							<xsl:when test="position()>=4" />
 							<xsl:otherwise> <!-- No se puede poner < en un test -->
 
 								<tr>
-									<td><xsl:value-of select="nombre" /></td>
-									<td><xsl:value-of select="partidosjugados" /></td>
-									<td><xsl:value-of select="partidosganados" /></td>
-									<td><xsl:value-of select="partidosempatados" /></td>
-									<td><xsl:value-of select="partidosperdidos" /></td>
-									<td><xsl:value-of select="golesfavor" /></td>
-									<td><xsl:value-of select="golescontra" /></td>
-									<td><xsl:value-of select="puntos" /></td>
+									<td>
+										<xsl:value-of select="nombre" />
+									</td>
+									<td>
+										<xsl:value-of select="partidosjugados" />
+									</td>
+									<td>
+										<xsl:value-of select="partidosganados" />
+									</td>
+									<td>
+										<xsl:value-of select="partidosempatados" />
+									</td>
+									<td>
+										<xsl:value-of select="partidosperdidos" />
+									</td>
+									<td>
+										<xsl:value-of select="golesfavor" />
+									</td>
+									<td>
+										<xsl:value-of select="golescontra" />
+									</td>
+									<td>
+										<xsl:value-of select="puntos" />
+									</td>
 								</tr>
 							</xsl:otherwise>
 						</xsl:choose>
 						<xsl:sort select="golesfavor" order="descending" />
 					</xsl:for-each>
 				</table>
-				<br/>
+				<br />
 				<table border="1">
 					<tr bgcolor="green">
 						<th>Equipo</th>
@@ -180,23 +196,30 @@
 					<xsl:for-each select="equipos/equipo">
 						<xsl:choose>
 							<xsl:when test="position()>=18"> <!-- No se puede poner < en un test -->
-
 								<tr>
-									<td><xsl:value-of select="nombre" />
+									<td>
+										<xsl:value-of select="nombre" />
 									</td>
-									<td><xsl:value-of select="partidosjugados" />
+									<td>
+										<xsl:value-of select="partidosjugados" />
 									</td>
-									<td><xsl:value-of select="partidosganados" />
+									<td>
+										<xsl:value-of select="partidosganados" />
 									</td>
-									<td><xsl:value-of select="partidosempatados" />
+									<td>
+										<xsl:value-of select="partidosempatados" />
 									</td>
-									<td><xsl:value-of select="partidosperdidos" />
+									<td>
+										<xsl:value-of select="partidosperdidos" />
 									</td>
-									<td><xsl:value-of select="golesfavor" />
+									<td>
+										<xsl:value-of select="golesfavor" />
 									</td>
-									<td><xsl:value-of select="golescontra" />
+									<td>
+										<xsl:value-of select="golescontra" />
 									</td>
-									<td><xsl:value-of select="puntos" />
+									<td>
+										<xsl:value-of select="puntos" />
 									</td>
 								</tr>
 							</xsl:when>

@@ -133,7 +133,7 @@
 						<xsl:sort select="puntos" order="descending" />
 					</xsl:for-each>
 				</table>
-				<br/>
+				<br />
 				<table border="1">
 					<tr bgcolor="green">
 						<th>Equipo</th>
@@ -147,7 +147,7 @@
 					</tr>
 					<xsl:for-each select="equipos/equipo">
 						<xsl:choose>
-							<xsl:when test="position()>=4"/>
+							<xsl:when test="position()>=4" />
 							<xsl:otherwise> <!-- No se puede poner < en un test -->
 
 								<tr>
@@ -181,7 +181,7 @@
 						<xsl:sort select="golesfavor" order="descending" />
 					</xsl:for-each>
 				</table>
-				<br/>
+				<br />
 				<table border="1">
 					<tr bgcolor="green">
 						<th>Equipo</th>
@@ -196,7 +196,6 @@
 					<xsl:for-each select="equipos/equipo">
 						<xsl:choose>
 							<xsl:when test="position()>=18"> <!-- No se puede poner < en un test -->
-
 								<tr>
 									<td>
 										<xsl:value-of select="nombre" />
