@@ -1,0 +1,30 @@
+﻿A partir del fichero xml con la información de una universidad (usado para practicar xpath), 
+realiza transformaciones con XSLT para conseguir lo siguiente:
+
+
+1. Una página web (XHTML) que tenga como "encabezado h1"  el nombre de la universidad, y una tabla en la que aparezcan en una columna los nombres de las carreras,
+y en la otra los créditos de cada una de ellas. El color de fondo de las filas pares debe ser azul claro, y el de las filas impares amarillo claro.
+
+
+2. Una página web (XHTML) similar a la del ejercicio anterior pero en la que sólo aparezcan las carreras que tienen más de 260 créditos.
+
+
+3. Una página web (XHTML) similar a la del ejercicio 1 pero en la que las titulaciones que tienen más de 260 créditos aparezcan escritas en mayúsculas, 
+negrita y con el texto subrayado.
+
+
+4. Una página web (XHTML) similar a la del ejercicio 1 pero añadiendo una columna en la que aparezcan las asignaturas de cada carrera.
+
+
+5. Repetir el ejercicio anterior pero subdividiendo la columna de las asignaturas en dos: una con las asignaturas del primer trimestre y otra con las del segundo.
+
+
+6. Una página web (XHTML) similar a la del ejercicio 1 pero añadiendo dos nuevas tablas:
+
+a) una que contenga todas las asignaturas (junto a toda su información, incluyendo el nombre de la carrera en la que se imparten)
+
+b) otra que contenga todos los alumnos incluyendo los nombres de las asignaturas de las que están matriculados.
+
+
+7. Un fichero XML con una estructura diferente, ya que los elementos "asignatura" con toda su información (excepto el atributo "titulación") 
+deben incluirse dentro de los elementos "carrera".

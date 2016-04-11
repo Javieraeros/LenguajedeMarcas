@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="Liga4.xsl"?>
-<equipos> <!-- Acuerdate de cambiar la configuración del run de eclipse, qeu da fallos -->
+<equipos> <!-- Acuerdate de cambiar la configuración del run de eclipse, que da fallos -->
 	<equipo>
 		<nombre>Real Madrid</nombre>
 		<partidosjugados>31</partidosjugados>
