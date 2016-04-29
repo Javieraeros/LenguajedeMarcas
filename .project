@@ -5,7 +5,13 @@
 	<projects>
 	</projects>
 	<buildSpec>
+		<buildCommand>
+			<name>org.ahmadsoft.foprocessor.fopBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
 	</buildSpec>
 	<natures>
+		<nature>org.ahmadsoft.foprocessor.fopNature</nature>
 	</natures>
 </projectDescription>
