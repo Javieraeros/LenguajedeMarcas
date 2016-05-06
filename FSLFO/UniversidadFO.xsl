@@ -19,21 +19,21 @@
 					<fo:block>
 						<xsl:value-of select="universidad/nombre" />
 					</fo:block>
-					<fo:table>
+					<fo:table border-style="solid">
 						<fo:table-column column-width="60mm" />
 						<fo:table-column column-width="25mm" />
 						<fo:table-column column-width="100mm" />
 
 						<fo:table-header>
 							<fo:table-row>
-								<fo:table-cell>
-									<fo:block font-weight="bold">Nombre de la carrera</fo:block>
+								<fo:table-cell border-style="solid">
+									<fo:block font-weight="bold" color="blue">Nombre de la carrera</fo:block>
 								</fo:table-cell>
-								<fo:table-cell>
-									<fo:block font-weight="bold">Créditos</fo:block>
+								<fo:table-cell border-style="solid">
+									<fo:block font-weight="bold" color="blue">Créditos</fo:block>
 								</fo:table-cell>
-								<fo:table-cell>
-									<fo:block font-weight="bold">Asignaturas</fo:block>
+								<fo:table-cell border-style="solid">
+									<fo:block font-weight="bold" color="blue">Asignaturas</fo:block>
 								</fo:table-cell>
 							</fo:table-row>
 						</fo:table-header>
@@ -41,18 +41,18 @@
 							<xsl:for-each select="universidad/carreras/carrera">
 								<xsl:variable name="idcarrera" select="@id" />
 								<fo:table-row>
-									<fo:table-cell>
-										<fo:block>
+									<fo:table-cell border-style="solid">
+										<fo:block color="gray">
 											<xsl:value-of select="nombre" />
 										</fo:block>
 									</fo:table-cell>
-									<fo:table-cell>
-										<fo:block>
+									<fo:table-cell border-style="solid">
+										<fo:block color="gray">
 											<xsl:value-of select="creditos" />
 										</fo:block>
 									</fo:table-cell>
-									<fo:table-cell>
-										<fo:block linefeed-treatment="preserve">
+									<fo:table-cell border-style="solid">
+										<fo:block linefeed-treatment="preserve" color="gray">
 											<xsl:for-each
 												select="//universidad/asignaturas/asignatura[@titulacion=$idcarrera]">
 												<xsl:value-of select="nombre" /><xsl:text>&#xA;</xsl:text>
