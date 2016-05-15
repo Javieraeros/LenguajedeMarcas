@@ -77,7 +77,7 @@
 			</asignaturas>
 			<alumnos>
 				<xsl:for-each select="alumnos/alumno">
-					<alumno id="e01">
+					<alumno>
 						<xsl:attribute name="id">
 							<xsl:value-of select="@id" />
 						</xsl:attribute>
