@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Ejercicio2.xsl" ?> 
+<colegio>
+	<alumnos>
+		<alumno id="1">
+			<nombre>Manuel</nombre>
+		</alumno>
+		<alumno id="2">
+			<nombre>Román</nombre>
+		</alumno>
+		<alumno id="3">
+			<nombre>Laura</nombre>
+		</alumno>
+		<alumno id="4">
+			<nombre>Pedro</nombre>
+		</alumno>
+		<alumno id="5">
+			<nombre>María</nombre>
+		</alumno>
+		<alumno id="6">
+			<nombre>Lucía</nombre>
+		</alumno>
+	</alumnos>
+	
+	<asignaturas>
+		<asignatura id="1">
+			<nombre>Lengua</nombre>
+			<modalidad>A</modalidad>
+		</asignatura>
+		<asignatura id="2">
+			<nombre>Matemáticas</nombre>
+			<modalidad>A</modalidad>
+		</asignatura>
+		<asignatura id="3">
+			<nombre>Inglés</nombre>
+			<modalidad>B</modalidad>
+		</asignatura>
+		<asignatura id="4">
+			<nombre>Conocimiento del Medio</nombre>
+			<modalidad>A</modalidad>
+		</asignatura>
+		<asignatura id="5">
+			<nombre>Música</nombre>
+			<modalidad>B</modalidad>
+		</asignatura>
+	</asignaturas>
+	
+	<notas>
+		<!-- Notas del alumno 1 -->
+		<nota>
+			<asignatura>1</asignatura>
+			<alumno>1</alumno>
+			<calificacion>6</calificacion>
+		</nota>
+		<nota>
+			<asignatura>2</asignatura>
+			<alumno>1</alumno>
+			<calificacion>4</calificacion>
+		</nota>
+		<nota>
+			<asignatura>3</asignatura>
+			<alumno>1</alumno>
+			<calificacion>5</calificacion>
+		</nota>
+		<nota>
+			<asignatura>4</asignatura>
+			<alumno>1</alumno>
+			<calificacion>3</calificacion>
+		</nota>
+		<nota>
+			<asignatura>5</asignatura>
+			<alumno>1</alumno>
+			<calificacion>8</calificacion>
+		</nota>
+		
+		<!-- Notas del alumno 2 -->
+		<nota>
+			<asignatura>1</asignatura>
+			<alumno>2</alumno>
+			<calificacion>4</calificacion>
+		</nota>
+		<nota>
+			<asignatura>2</asignatura>
+			<alumno>2</alumno>
+			<calificacion>5</calificacion>
+		</nota>
+		<nota>
+			<asignatura>3</asignatura>
+			<alumno>2</alumno>
+			<calificacion>9</calificacion>
+		</nota>
+		<nota>
+			<asignatura>4</asignatura>
+			<alumno>2</alumno>
+			<calificacion>5</calificacion>
+		</nota>
+		<nota>
+			<asignatura>5</asignatura>
+			<alumno>2</alumno>
+			<calificacion>6</calificacion>
+		</nota>
+		
+		<!-- Notas del alumno 3 -->
+		<nota>
+			<asignatura>1</asignatura>
+			<alumno>3</alumno>
+			<calificacion>6</calificacion>
+		</nota>
+		<nota>
+			<asignatura>2</asignatura>
+			<alumno>3</alumno>
+			<calificacion>8</calificacion>
+		</nota>
+		<nota>
+			<asignatura>3</asignatura>
+			<alumno>3</alumno>
+			<calificacion>8</calificacion>
+		</nota>
+		<nota>
+			<asignatura>4</asignatura>
+			<alumno>3</alumno>
+			<calificacion>6</calificacion>
+		</nota>
+		<nota>
+			<asignatura>5</asignatura>
+			<alumno>3</alumno>
+			<calificacion>9</calificacion>
+		</nota>
+		
+		<!-- Notas del alumno 4 -->
+		<nota>
+			<asignatura>1</asignatura>
+			<alumno>4</alumno>
+			<calificacion>2</calificacion>
+		</nota>
+		<nota>
+			<asignatura>2</asignatura>
+			<alumno>4</alumno>
+			<calificacion>0</calificacion>
+		</nota>
+		<nota>
+			<asignatura>3</asignatura>
+			<alumno>4</alumno>
+			<calificacion>4</calificacion>
+		</nota>
+		<nota>
+			<asignatura>4</asignatura>
+			<alumno>4</alumno>
+			<calificacion>6</calificacion>
+		</nota>
+		<nota>
+			<asignatura>5</asignatura>
+			<alumno>4</alumno>
+			<calificacion>1</calificacion>
+		</nota>
+		
+		<!-- Notas del alumno 5 -->
+		<nota>
+			<asignatura>1</asignatura>
+			<alumno>5</alumno>
+			<calificacion>7</calificacion>
+		</nota>
+		<nota>
+			<asignatura>2</asignatura>
+			<alumno>5</alumno>
+			<calificacion>5</calificacion>
+		</nota>
+		<nota>
+			<asignatura>3</asignatura>
+			<alumno>5</alumno>
+			<calificacion>4</calificacion>
+		</nota>
+		<nota>
+			<asignatura>4</asignatura>
+			<alumno>5</alumno>
+			<calificacion>8</calificacion>
+		</nota>
+		<nota>
+			<asignatura>5</asignatura>
+			<alumno>5</alumno>
+			<calificacion>10</calificacion>
+		</nota>
+		
+		<!-- Notas del alumno 6 -->
+		<nota>
+			<asignatura>1</asignatura>
+			<alumno>6</alumno>
+			<calificacion>9</calificacion>
+		</nota>
+		<nota>
+			<asignatura>2</asignatura>
+			<alumno>6</alumno>
+			<calificacion>6</calificacion>
+		</nota>
+		<nota>
+			<asignatura>3</asignatura>
+			<alumno>6</alumno>
+			<calificacion>3</calificacion>
+		</nota>
+		<nota>
+			<asignatura>4</asignatura>
+			<alumno>6</alumno>
+			<calificacion>7</calificacion>
+		</nota>
+		<nota>
+			<asignatura>5</asignatura>
+			<alumno>6</alumno>
+			<calificacion>8</calificacion>
+		</nota>
+	</notas>
+
+</colegio>
